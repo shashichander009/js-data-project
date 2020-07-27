@@ -1,9 +1,8 @@
-import requests
-import csv
 from os import path
-from matplotlib import pyplot as plt
-from matplotlib import patches as mpatches
+import csv
 import json
+import requests
+
 
 UN_DATA_URL = 'https://datahub.io/core/population-\
 growth-estimates-and-projections/r/population-estimates.csv'

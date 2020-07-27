@@ -55,12 +55,22 @@ function prepAseanChart() {
     })
     .then(aseanData => {
       aseanData = Object.entries(aseanData);
+
+      for (let i = 0; i < aseanData.length; i++) {
+        let country = aseanData[i][0];
+
+        if (country == "Viet Nam") aseanData[i][0] = "VietNam";
+        if (country == "Brunei Darussalam") aseanData[i][0] = "Brunei";
+        if (country == "Lao People's Democratic Republic")
+          aseanData[i][0] = "Laos";
+      }
+
       Highcharts.chart("container", {
         chart: {
           type: "column"
         },
         title: {
-          text: "ASEAN Countries Population Over the Years"
+          text: "ASEAN Countries Population in 2014"
         },
         subtitle: {
           text:
@@ -154,8 +164,10 @@ function prepAseanGroupChart() {
     })
     .then(aseanGroupData => {
       aseanGroupData = Object.entries(aseanGroupData);
+
       let seriesArray = [];
 
+      let counter = 0;
       for (let i = 0; i < aseanGroupData.length; i += 5) {
         var country = aseanGroupData[i][0].split("-")[0];
 
@@ -167,9 +179,12 @@ function prepAseanGroupChart() {
           name: country,
           data: []
         };
+
         for (let j = 0; j < 5; j++) {
-          obj.data.push(aseanGroupData[i][1]);
+          obj.data.push(aseanGroupData[counter][1]);
+          counter++;
         }
+
         seriesArray.push(obj);
       }
       Highcharts.chart("container", {

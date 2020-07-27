@@ -53,6 +53,13 @@ Once you are done, run the http server
 python3 -m http.server
 ```
 
+Open index.html to view charts
+
+
+## Deployment
+
+This project is deployed at: https://dataproject-js-un-shashi.herokuapp.com/
+
 
 Thank you 
 
