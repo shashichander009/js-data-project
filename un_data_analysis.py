@@ -195,7 +195,7 @@ def main():
                 saarc_data_process()
                 data_clear()
                 asean_group_data_process()
-                print("######........JSON DATA PREPARED. RUN SERVER.......######")
+                print("######...JSON DATA PREPARED. RUN SERVER...######")
                 break
             elif choice == 5:
                 break
