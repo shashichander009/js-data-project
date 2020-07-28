@@ -8,7 +8,7 @@ We are using data released by [United Nations]( https://datahub.io/core/populati
 
 ## Language and Libraries
 
-This project is built with HTML, CSS, JavaScript and Python 3.7.4. For charting, have used [highcharts]( https://www.highcharts.com/)
+This project is built with HTML, CSS, JavaScript and Python 3.7.4. For charting, we have used [highcharts]( https://www.highcharts.com/)
 
 
 ## Installation
@@ -58,7 +58,7 @@ Open index.html to view charts
 
 ## Deployment
 
-This project is deployed at: https://dataproject-js-un-shashi.herokuapp.com/
+This project is deployed at: https://dataproject-js-un-shashi.herokuapp.com/ 
 
 
 Thank you 

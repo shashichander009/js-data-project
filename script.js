@@ -1,7 +1,12 @@
+"use strict";
+
+//  PROBLEM NO 1
+//  This function prepares a Bar Plot of India's population vs. years.
+
 function prepIndiaChart() {
   fetch("/json/data1.json")
-    .then(response => {
-      return response.json();
+    .then(res => {
+      return res.json();
     })
     .then(indiaData => {
       indiaData = Object.entries(indiaData);
@@ -13,8 +18,9 @@ function prepIndiaChart() {
           text: "India's Population Over the Years"
         },
         subtitle: {
-          text:
-            'Source: <a href="https://datahub.io/core/population-growth-estimates-and-projections/r/population-estimates.csv">United Nations</a>'
+          text: `Source: <a href='https://datahub.io/core/
+          population-growth-estimates-and-projections/r/
+          population-estimates.csv'>United Nations</a>`
         },
         xAxis: {
           type: "category",
@@ -48,6 +54,10 @@ function prepIndiaChart() {
     });
 }
 
+//  PROBLEM NO 2
+//  This function prepares the Bar Chart of population of ASEAN countries in 2014
+//  ASEAN is a collection of South East Asian countries.
+
 function prepAseanChart() {
   fetch("/json/data2.json")
     .then(response => {
@@ -73,8 +83,9 @@ function prepAseanChart() {
           text: "ASEAN Countries Population in 2014"
         },
         subtitle: {
-          text:
-            'Source: <a href="https://datahub.io/core/population-growth-estimates-and-projections/r/population-estimates.csv">United Nations</a>'
+          text: `Source: <a href='https://datahub.io/core/
+          population-growth-estimates-and-projections/r/
+          population-estimates.csv'>United Nations</a>`
         },
         xAxis: {
           type: "category",
@@ -107,6 +118,12 @@ function prepAseanChart() {
     });
 }
 
+//  PROBLEM NO 3
+//  TOTAL population of SAARC countries over the past years
+//  In this case for each year we have to calculate total
+//  population of all SAARC countries.
+//  Then plot a BAR CHART of Total SAARC population vs. year.
+
 function prepSaarcChart() {
   fetch("/json/data3.json")
     .then(response => {
@@ -122,8 +139,9 @@ function prepSaarcChart() {
           text: "SAARC Countries Population Over the Years"
         },
         subtitle: {
-          text:
-            'Source: <a href="https://datahub.io/core/population-growth-estimates-and-projections/r/population-estimates.csv">United Nations</a>'
+          text: `Source: <a href='https://datahub.io/core/
+          population-growth-estimates-and-projections/r/
+          population-estimates.csv'>United Nations</a>`
         },
         xAxis: {
           type: "category",
@@ -156,6 +174,11 @@ function prepSaarcChart() {
       });
     });
 }
+
+//  PROBLEM NO 4
+//  Grouped Bar Chart - ASEAN population vs. years
+//  We will plot population of ASEAN countries as
+//  groups over the years 2011 - 2015.
 
 function prepAseanGroupChart() {
   fetch("/json/data4.json")
@@ -195,8 +218,9 @@ function prepAseanGroupChart() {
           text: "ASEAN Population (2011-2015)"
         },
         subtitle: {
-          text:
-            'Source: <a href="https://datahub.io/core/population-growth-estimates-and-projections/r/population-estimates.csv">United Nations</a>'
+          text: `Source: <a href='https://datahub.io/core/
+          population-growth-estimates-and-projections/r/
+          population-estimates.csv'>United Nations</a>`
         },
         xAxis: {
           categories: ["2011", "2012", "2013", "2014", "2015"],
