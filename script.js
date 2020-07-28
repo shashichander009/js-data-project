@@ -51,7 +51,8 @@ function prepIndiaChart() {
           }
         ]
       });
-    });
+    })
+    .catch(error => console.log(error));
 }
 
 //  PROBLEM NO 2
@@ -115,7 +116,8 @@ function prepAseanChart() {
           }
         ]
       });
-    });
+    })
+    .catch(error => console.log(error));
 }
 
 //  PROBLEM NO 3
@@ -172,7 +174,8 @@ function prepSaarcChart() {
           }
         ]
       });
-    });
+    })
+    .catch(error => console.log(error));
 }
 
 //  PROBLEM NO 4
@@ -250,5 +253,6 @@ function prepAseanGroupChart() {
         },
         series: seriesArray
       });
-    });
+    })
+    .catch(error => console.log(error));
 }
