@@ -11,7 +11,7 @@ kiwisolver==1.2.0
 lazy-object-proxy==1.4.3
 matplotlib==3.2.2
 mccabe==0.6.1
-numpy==1.19.0
+numpy==1.22.0
 pycodestyle==2.6.0
 pyflakes==2.2.0
 pylint==2.5.3
